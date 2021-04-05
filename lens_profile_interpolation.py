@@ -94,7 +94,7 @@ def Interp_profile_theo(lens_period,lens_heigth,n_PC,nb_lens,split_lens):
     # estimate the lens pitch
     lens_period=round(lens_period_mean)
     ###### experimental lens profile ######
-    return X_lens0, Y_lens0,F,Y_lens,peakind,nb_lens_real,lens_period_mean
+    return X_lens, Y_lens0,F,Y_lens,peakind,nb_lens_real,lens_period_mean
 
 def Interp_profile_exp(file_path,x_crop_min,x_crop_max,expected_width,filter_detect_peak,lamination_plate,split_lens,n_PC):
         
@@ -213,4 +213,4 @@ def Interp_profile_exp(file_path,x_crop_min,x_crop_max,expected_width,filter_det
         plt.show()
     
     
-        return X_lens0, Y_lens0, F, Y_lens, peakind,nb_lens_real,lens_period_mean
+        return X_lens, Y_lens0, F, Y_lens, peakind,nb_lens_real,lens_period_mean

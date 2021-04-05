@@ -23,7 +23,7 @@ n=n_air/n_PC
 ### input variable for the theoretical lens profile (choose_data=0)
 
 lens_period=90 # pitch between two lenses
-lens_heigth=12 # heigth of the lens (cylindrical profile)
+lens_heigth=17 # heigth of the lens (cylindrical profile)
 nb_lens=10 # number of lens to be computed
 
 ### input variable for the experimental lens profile (choose_data=1)
@@ -40,7 +40,7 @@ x_crop_max=15000 #x stop for the profile calculation
 
 ### variables to drive the software parts
 
-choose_data=1# 0 generate a theoretical lens array, 1 interpolate an experimental lens array, other number don't calculate again
+choose_data=0# 0 generate a theoretical lens array, 1 interpolate an experimental lens array, other number don't calculate again
 lamination_plate=0 # sometimes we want to check the difference between plates profile and actual laminated lens (it just flip the data along y-axis)
 calculation=1 # calculate only when the lens profile and the calculation points are set up
 plotting_experimental=0
@@ -57,7 +57,7 @@ range_angle=np.linspace(-out_angle_lim,out_angle_lim,split_out_angle)
 
 PSF=1
 dist_center=0 # position the PSF emiter at a certain distance from the center of the lens (e.g: 10 => 10 µm from the lens center axis)
-nb_step=20 # discretization of the PSF
+nb_step=25 # discretization of the PSF
 y_top_PSF=100
 y_bottom_PSF=300
 
@@ -73,6 +73,7 @@ if choose_data==0:
 if choose_data==1:
     x_grid, y_grid, F, Y_lens, peakind,nb_lens_real,lens_period_mean=Interp_profile_exp(file_path,x_crop_min,x_crop_max,expected_width,filter_detect_peak,lamination_plate,split_lens,n_PC)
 
+plot_profile(x_grid,y_grid)
 #%% Experimental plot of the lens profiles
 #if plotting_experimental==1:
 X_lens=x_grid    
@@ -132,7 +133,7 @@ for idx, nb_step_calculation_points in enumerate(z_depth):
     x1,x2,y1,y2 = plt.axis()
     #plt.axis((T_grid_min,T_grid_max,y1,90))
     plt.grid(color='lightgrey', linestyle='--', linewidth=0.5)
-    f2.savefig('measured_conf_{0}.png'.format(name_file), dpi=800, bbox_inches='tight', pad_inches=0)
+    #f2.savefig('measured_conf_{0}.png'.format(name_file), dpi=800, bbox_inches='tight', pad_inches=0)
     plt.show()
     #%% Calculation (forward ray tracing vectors calculation)
     
