@@ -1,5 +1,5 @@
-from libraries_import import *
-from general_functions import *
+from ray_tracing_lib.libraries_import import *
+from ray_tracing_lib.general_functions import *
 
 def Ray_tracing_engine(F,theta_lim,inc_x,nb_ray_calc_max,color_def,X_lens,Y_lens,step_calc,n_PC,n_air,y_lim_top):
     

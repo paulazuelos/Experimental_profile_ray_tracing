@@ -1,11 +1,11 @@
-from libraries_import import *
-from lens_profile_interpolation import *
-from emitter_positionning import *
-from ray_tracing_engine import *
-from plotting_functions import *
-from general_functions import *
-# P.Azuelos Idemia R&T team 2020
-# Forward ray tracing algorithm;  LQA project 
+from ray_tracing_lib.libraries_import import *
+from ray_tracing_lib.lens_profile_interpolation import *
+from ray_tracing_lib.emitter_positionning import *
+from ray_tracing_lib.ray_tracing_engine import *
+from ray_tracing_lib.plotting_functions import *
+from ray_tracing_lib.general_functions import *
+# P.Azuelos 
+# Forward ray tracing algorithm;  
 # study of the effect of the lens shape
 # study of the effect of the engraving and color matrix position
 # render above lenses with an angle
@@ -83,8 +83,6 @@ nb_cut=8
 nb_ray_calc_max=800000
 ### input variables for plot
 colors = np.array([(1, 1, 0), (0, 1, 1), (1, 0, 1),(0.5,0.5,0.5)])
-
-
 
 
 if ray_tracing==1:

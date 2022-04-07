@@ -1,4 +1,4 @@
-from libraries_import import *
+from ray_tracing_lib.libraries_import import *
 
 def gaussian(x, mu, sig):
     return np.exp(-np.power(x - mu, 2.) / (2 * np.power(sig, 2.)))

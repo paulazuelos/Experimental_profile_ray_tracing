@@ -1,5 +1,5 @@
-from libraries_import import *
-from general_functions import *
+from ray_tracing_lib.libraries_import import *
+from ray_tracing_lib.general_functions import *
 
 
 def Interp_profile_theo(lens_period,lens_heigth,n_PC,nb_lens,split_lens):

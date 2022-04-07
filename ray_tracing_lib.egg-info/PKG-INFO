@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: ray-tracing-lib
+Version: 0.0.1
+Summary: Ray tracing from Experiemental profile
+Home-page: 
+Download-URL: 
+Author: Paul Azuelos
+License: Copyright
+Keywords: optics,photonics,lens,simulation
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Copyright License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+
+# Experimental_profile_ray_tracing
+
+In this project we use ray tracing to simulate the point spread function and other optical metrics for a confocal measured experimental lens profile.
+
+The rays are propagating from the top to a microlens array printed in the polycarbonate.
+
+![Example of result](result_example.png)
+# to install the ray_tracing lib package
+
+```shell
+pip install -e .
+```
+
